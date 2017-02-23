@@ -21,13 +21,14 @@ for(int i=0; i<data.size();i++){
 }
 return -1;
 }
-void selectionSort(auto& Data); 
+void selectionSort(auto& Data);
+ 
 
 int main()
 {
   vector<string> inputs;
   string search_key, input;
-  int result;
+ 
 
    cout<<"Welcome to \"search it\". We first need some input data."<<endl;
    cout<<"We'll assume the inputs do not have any spaces."<<endl<<endl;
@@ -49,9 +50,10 @@ int main()
        exit(1);//nothing to do but quit program
   }
  
- SelectionSort(input);
-   
-
+ selectionSort(input);
+  
+  
+ 
     return 0;
 }
 
@@ -74,4 +76,7 @@ Data[minIndex] = tmp;
 } //end if
 } //end outer loop
 } //end function
+
+
+
 
