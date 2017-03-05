@@ -21,7 +21,7 @@ for(int i=0; i<data.size();i++){
 }
 return -1;
 }
-void selectionSort(auto& Data);
+void bubbleSort(auto& Data);
  
 
 int main()
@@ -50,33 +50,26 @@ int main()
        exit(1);//nothing to do but quit program
   }
  
- selectionSort(input);
-  
-  
- 
-    return 0;
+
+bubbleSort(inputs);
+
+for(int i=0; i < inputs.size( );i++){
+cout<<inputs[i]<<endl;
 }
 
-void selectionSort(auto& Data) 
-{
-int i, j, minIndex, tmp;
-for (i = 0; i < Data.size()-1; i++) 
-{
-minIndex = i;
-//find smallest in unsorted part
-for (j = i + 1; j < Data.size(); j++)
-{
-if (Data[j] < Data[minIndex])
-minIndex = j;
+
+  
+      return 0;
 }
-if (minIndex != i){
-tmp = Data[i];
-Data[i] = Data[minIndex];
-Data[minIndex] = tmp;
-} //end if
-} //end outer loop
-} //end function
 
+void bubbleSort(auto& Data) {
+for(int k=0; k<Data.size( ); k++)
 
+for(int i=0; i < Data.size( )-1-k; i++)
+if ( Data[i] > Data[i+1]){
+swap(Data[i], Data[i+1]);
+}
+}
+	
 
 
